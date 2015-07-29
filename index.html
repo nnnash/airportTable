@@ -1,387 +1,2527 @@
 <html>
-<head>
-	<meta charset="UTF-8">
-	<title>Airport table</title>
-	<link rel="stylesheet" href="style.css"/>
-</head>
-<body>
-	<div class="container">
-		<div class="tBodyContainer">
-			<table id="table">
-				<thead>
-					<tr>
-						<th>
-							тип рейса
-							<div>тип рейса</div>
-						</th>
-						<th>
-							номер рейса
-							<div>номер рейса</div>
-						</th>
-						<th>
-							авиакомпания
-							<div>авиакомпания</div>
-						</th>
-						<th>
-							логотип авиакомпании
-							<div>логотип авиакомпании</div>
-						</th>
-						<th>
-							тип воздушного судна
-							<div>тип воздушного судна</div>
-						</th>
-						<th>
-							аэропорт назначения
-							<div>аэропорт назначения</div>
-						</th>
-						<th>
-							плановое время вылета или прилёта
-							<div>плановое время вылета или прилёта</div>
-						</th>
-						<th>
-							статус рейса
-							<div>статус рейса</div>
-						</th>
-						<th>
-							примечание
-							<div>примечание</div>
-						</th>
-					</tr>
-				</thead>
+  <head>
+    <meta charset="UTF-8">
+    <title>Airport table</title>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="tableContainer">
+        <input type="checkbox" id="arrivalsCheck" value="true" checked>
+        <span>Прибытие</span>
+        <input type="checkbox" id="departuresCheck" value="true" checked>
+        <span>Отправление</span>
+        <div id="tBodyContainer">
+          <table id="table">
+            <thead>
+              <tr>
+                <th class="type"></th>
+                <th class="time"></th>
+                <th class="flight"></th>
+                <th class="logo"></th>
+                <th class="airlines"></th>
+                <th class="city"></th>
+                <th class="status"></th>
+              </tr>
+            </thead>
 
-				<tbody>
-					<tr>
-						<td>S7 35</td>
-						<td>Самара(Курумоч)</td>
-						<td>22 июл 19:00</td>
-						<td>22 июл 19:39</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>NN 189</td>
-						<td>Комсомольск-на-Амуре(Хурба)</td>
-						<td>22 июл 19:00</td>
-						<td>22 июл 19:14</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>YC 9323</td>
-						<td>Ларнака</td>
-						<td>22 июл 19:00</td>
-						<td>22 июл 19:44</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>IB 7244  (совмещен с S7 35)</td>
-						<td>Самара(Курумоч)</td>
-						<td>22 июл 19:00</td>
-						<td>22 июл 19:39</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>JL 7173  (совмещен с S7 35)</td>
-						<td>Самара(Курумоч)</td>
-						<td>22 июл 19:00</td>
-						<td>22 июл 19:39</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>HG 5866  (совмещен с S7 35)</td>
-						<td>Самара(Курумоч)</td>
-						<td>22 июл 19:00</td>
-						<td>22 июл 19:39</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>EY 7183  (совмещен с S7 35)</td>
-						<td>Самара(Курумоч)</td>
-						<td>22 июл 19:00</td>
-						<td>22 июл 19:39</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>PS 9035  (совмещен с S7 35)</td>
-						<td>Самара(Курумоч)</td>
-						<td>22 июл 19:00</td>
-						<td>22 июл 19:39</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>LY 8935  (совмещен с S7 35)</td>
-						<td>Самара(Курумоч)</td>
-						<td>22 июл 19:00</td>
-						<td>22 июл 19:39</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>QR 5710  (совмещен с S7 35)</td>
-						<td>Самара(Курумоч)</td>
-						<td>22 июл 19:00</td>
-						<td>22 июл 19:39</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>R2 5997</td>
-						<td>Сочи(Адлер)</td>
-						<td>22 июл 19:05</td>
-						<td>22 июл 19:12</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>S7 233</td>
-						<td>Воронеж(Чертовицкое)</td>
-						<td>22 июл 19:05</td>
-						<td>22 июл 20:09</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>QR 5794  (совмещен с S7 233)</td>
-						<td>Воронеж(Чертовицкое)</td>
-						<td>22 июл 19:05</td>
-						<td>22 июл 20:09</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>UN 117</td>
-						<td>Петропавловск-Камчатский(Елизово)</td>
-						<td>22 июл 19:15</td>
-						<td>22 июл 19:24</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>U6 105</td>
-						<td>Иркутск</td>
-						<td>22 июл 19:20</td>
-						<td>22 июл 19:40</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>7R 173</td>
-						<td>Пенза(Терновка)</td>
-						<td>22 июл 19:25</td>
-						<td>22 июл 19:20</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>UN 123</td>
-						<td>Владивосток(Кневичи)</td>
-						<td>22 июл 19:30</td>
-						<td>22 июл 20:05</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>U6 2909</td>
-						<td>Ош</td>
-						<td>22 июл 19:35</td>
-						<td>22 июл 19:46</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>S7 63</td>
-						<td>Казань(Основной)</td>
-						<td>22 июл 19:40</td>
-						<td>22 июл 20:27</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>PS 9063  (совмещен с S7 63)</td>
-						<td>Казань(Основной)</td>
-						<td>22 июл 19:40</td>
-						<td>22 июл 20:27</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>IB 7246  (совмещен с S7 63)</td>
-						<td>Казань(Основной)</td>
-						<td>22 июл 19:40</td>
-						<td>22 июл 20:27</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>BA 8793  (совмещен с S7 63)</td>
-						<td>Казань(Основной)</td>
-						<td>22 июл 19:40</td>
-						<td>22 июл 20:27</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>QR 5712  (совмещен с S7 63)</td>
-						<td>Казань(Основной)</td>
-						<td>22 июл 19:40</td>
-						<td>22 июл 20:27</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>RJ 3461  (совмещен с S7 63)</td>
-						<td>Казань(Основной)</td>
-						<td>22 июл 19:40</td>
-						<td>22 июл 20:27</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>LY 8963  (совмещен с S7 63)</td>
-						<td>Казань(Основной)</td>
-						<td>22 июл 19:40</td>
-						<td>22 июл 20:27</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>U6 351</td>
-						<td>Мирный</td>
-						<td>22 июл 19:45</td>
-						<td>22 июл 20:02</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>GH 265</td>
-						<td>Симферополь (Центральный)</td>
-						<td>22 июл 19:50</td>
-						<td>22 июл 20:17</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>S7 1</td>
-						<td>Нижний Новгород(Стригино)</td>
-						<td>22 июл 19:50</td>
-						<td>22 июл 20:03</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>QR 5796  (совмещен с S7 1)</td>
-						<td>Нижний Новгород(Стригино)</td>
-						<td>22 июл 19:50</td>
-						<td>22 июл 20:03</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>JL 7179  (совмещен с S7 1)</td>
-						<td>Нижний Новгород(Стригино)</td>
-						<td>22 июл 19:50</td>
-						<td>22 июл 20:03</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>U6 93</td>
-						<td>Чита(Кадала)</td>
-						<td>22 июл 19:55</td>
-						<td>22 июл 20:04</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>UN 965</td>
-						<td>Гонконг(Чек Лап Кoк Интернэшнл)</td>
-						<td>22 июл 20:10</td>
-						<td>22 июл 22:00</td>
-						<td></td>
-						<td>Выход изменён на 16A</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>U6 343</td>
-						<td>Улан-Удэ</td>
-						<td>22 июл 20:15</td>
-						<td>22 июл 20:42</td>
-						<td></td>
-						<td>Отправлен</td>
-						<td></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-	</div>
-</body>
+            <tbody>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:05</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">AF 4430</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Эйр Франс</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Екатеринбург</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:05</td>
+                <td class="smallTime">00:05</td>
+                <td class="flight">AF 4430</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/7F140A14-936D-452E-8B8D-B14214707604/logo_af_small.png" alt="Эйр Франс" width="58" height="7"></td>
+                <td class="airlines">Эйр Франс</td>
+                <td class="city">Екатеринбург</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:05</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">AF 4964</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Эйр Франс</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Челябинск</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">отменен </span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:05</td>
+                <td class="smallTime">00:05</td>
+                <td class="flight">AF 4964</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/7F140A14-936D-452E-8B8D-B14214707604/logo_af_small.png" alt="Эйр Франс" width="58" height="7"></td>
+                <td class="airlines">Эйр Франс</td>
+                <td class="city">Челябинск</td>
+                <td class="status">отменен </td>
+                <td class="smallStatus">отм.</td>
+              </tr>
+              <tr class="arrivals">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Прибытие</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:05</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">JU 8153</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Эйр Сербиа</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Санкт-Петербург</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">совершил посадку в 02:26</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:05</td>
+                <td class="smallTime">00:05</td>
+                <td class="flight">JU 8153</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/40390547-1522-4E0D-A8F5-C23955E3D6F4/air-serbia-1.jpg" alt="Эйр Сербиа" width="46" height="23"></td>
+                <td class="airlines">Эйр Сербиа</td>
+                <td class="city">Санкт-Петербург</td>
+                <td class="status">совершил посадку в 02:26</td>
+                <td class="smallStatus">сел</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:05</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">KL 2901</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">КЛМ Королевские Голландские Авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Краснодар</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:05</td>
+                <td class="smallTime">00:05</td>
+                <td class="flight">KL 2901</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/9AD7B5AC-FD74-44D2-AA21-DF28E057E93B/klm_small.gif" alt="КЛМ Королевские Голландские Авиалинии" width="32" height="14"></td>
+                <td class="airlines">КЛМ Королевские Голландские Авиалинии</td>
+                <td class="city">Краснодар</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:05</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">KL 2942</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">КЛМ Королевские Голландские Авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Челябинск</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">отменен </span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:05</td>
+                <td class="smallTime">00:05</td>
+                <td class="flight">KL 2942</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/9AD7B5AC-FD74-44D2-AA21-DF28E057E93B/klm_small.gif" alt="КЛМ Королевские Голландские Авиалинии" width="32" height="14"></td>
+                <td class="airlines">КЛМ Королевские Голландские Авиалинии</td>
+                <td class="city">Челябинск</td>
+                <td class="status">отменен </td>
+                <td class="smallStatus">отм.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:05</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">KL 3234</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">КЛМ Королевские Голландские Авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Екатеринбург</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:05</td>
+                <td class="smallTime">00:05</td>
+                <td class="flight">KL 3234</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/9AD7B5AC-FD74-44D2-AA21-DF28E057E93B/klm_small.gif" alt="КЛМ Королевские Голландские Авиалинии" width="32" height="14"></td>
+                <td class="airlines">КЛМ Королевские Голландские Авиалинии</td>
+                <td class="city">Екатеринбург</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="arrivals">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Прибытие</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:05</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 031</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Санкт-Петербург</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">совершил посадку в 02:26</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:05</td>
+                <td class="smallTime">00:05</td>
+                <td class="flight">SU 031</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Санкт-Петербург</td>
+                <td class="status">совершил посадку в 02:26</td>
+                <td class="smallStatus">сел</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:05</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 1112</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Краснодар</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:05</td>
+                <td class="smallTime">00:05</td>
+                <td class="flight">SU 1112</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Краснодар</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:05</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 1408</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Екатеринбург</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:05</td>
+                <td class="smallTime">00:05</td>
+                <td class="flight">SU 1408</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Екатеринбург</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:05</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 1424</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Челябинск</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">отменен </span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:05</td>
+                <td class="smallTime">00:05</td>
+                <td class="flight">SU 1424</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Челябинск</td>
+                <td class="status">отменен </td>
+                <td class="smallStatus">отм.</td>
+              </tr>
+              <tr class="arrivals">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Прибытие</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:10</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">8Q 871</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Онур Эйр</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Анталия</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">совершил посадку в 03:26</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:10</td>
+                <td class="smallTime">00:10</td>
+                <td class="flight">8Q 871</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/68A25C20-E401-4FFB-A33E-F111622DDBC5/onurair.jpg" alt="Онур Эйр" width="64" height="14"></td>
+                <td class="airlines">Онур Эйр</td>
+                <td class="city">Анталия</td>
+                <td class="status">совершил посадку в 03:26</td>
+                <td class="smallStatus">сел</td>
+              </tr>
+              <tr class="arrivals">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Прибытие</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:10</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">AF 1144</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Эйр Франс</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Париж</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">совершил посадку в 00:22</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:10</td>
+                <td class="smallTime">00:10</td>
+                <td class="flight">AF 1144</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/7F140A14-936D-452E-8B8D-B14214707604/logo_af_small.png" alt="Эйр Франс" width="58" height="7"></td>
+                <td class="airlines">Эйр Франс</td>
+                <td class="city">Париж</td>
+                <td class="status">совершил посадку в 00:22</td>
+                <td class="smallStatus">сел</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:10</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">KL 2930</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">КЛМ Королевские Голландские Авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Баку</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">отменен </span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:10</td>
+                <td class="smallTime">00:10</td>
+                <td class="flight">KL 2930</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/9AD7B5AC-FD74-44D2-AA21-DF28E057E93B/klm_small.gif" alt="КЛМ Королевские Голландские Авиалинии" width="32" height="14"></td>
+                <td class="airlines">КЛМ Королевские Голландские Авиалинии</td>
+                <td class="city">Баку</td>
+                <td class="status">отменен </td>
+                <td class="smallStatus">отм.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:10</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 1852</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Баку</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">отменен </span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:10</td>
+                <td class="smallTime">00:10</td>
+                <td class="flight">SU 1852</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Баку</td>
+                <td class="status">отменен </td>
+                <td class="smallStatus">отм.</td>
+              </tr>
+              <tr class="arrivals">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Прибытие</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:10</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 2317</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Берлин</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">совершил посадку в 02:13</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:10</td>
+                <td class="smallTime">00:10</td>
+                <td class="flight">SU 2317</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Берлин</td>
+                <td class="status">совершил посадку в 02:13</td>
+                <td class="smallStatus">сел</td>
+              </tr>
+              <tr class="arrivals">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Прибытие</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:10</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 4451</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Париж</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">совершил посадку в 00:22</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:10</td>
+                <td class="smallTime">00:10</td>
+                <td class="flight">SU 4451</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Париж</td>
+                <td class="status">совершил посадку в 00:22</td>
+                <td class="smallStatus">сел</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:15</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">AF 4892</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Эйр Франс</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Красноярск</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:15</td>
+                <td class="smallTime">00:15</td>
+                <td class="flight">AF 4892</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/7F140A14-936D-452E-8B8D-B14214707604/logo_af_small.png" alt="Эйр Франс" width="58" height="7"></td>
+                <td class="airlines">Эйр Франс</td>
+                <td class="city">Красноярск</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:15</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">AF 4912</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Эйр Франс</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Новосибирск</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:15</td>
+                <td class="smallTime">00:15</td>
+                <td class="flight">AF 4912</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/7F140A14-936D-452E-8B8D-B14214707604/logo_af_small.png" alt="Эйр Франс" width="58" height="7"></td>
+                <td class="airlines">Эйр Франс</td>
+                <td class="city">Новосибирск</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:15</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">AZ 3948</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Алиталия</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Новосибирск</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:15</td>
+                <td class="smallTime">00:15</td>
+                <td class="flight">AZ 3948</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/588230B8-B330-43C4-A574-864E59044B65/alitalia_small.jpg" alt="Алиталия" width="46" height="12"></td>
+                <td class="airlines">Алиталия</td>
+                <td class="city">Новосибирск</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:15</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">AZ 5651</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Алиталия</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Красноярск</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:15</td>
+                <td class="smallTime">00:15</td>
+                <td class="flight">AZ 5651</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/588230B8-B330-43C4-A574-864E59044B65/alitalia_small.jpg" alt="Алиталия" width="46" height="12"></td>
+                <td class="airlines">Алиталия</td>
+                <td class="city">Красноярск</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:15</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">KL 3188</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">КЛМ Королевские Голландские Авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Красноярск</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:15</td>
+                <td class="smallTime">00:15</td>
+                <td class="flight">KL 3188</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/9AD7B5AC-FD74-44D2-AA21-DF28E057E93B/klm_small.gif" alt="КЛМ Королевские Голландские Авиалинии" width="32" height="14"></td>
+                <td class="airlines">КЛМ Королевские Голландские Авиалинии</td>
+                <td class="city">Красноярск</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:15</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">KL 3206</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">КЛМ Королевские Голландские Авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Новосибирск</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:15</td>
+                <td class="smallTime">00:15</td>
+                <td class="flight">KL 3206</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/9AD7B5AC-FD74-44D2-AA21-DF28E057E93B/klm_small.gif" alt="КЛМ Королевские Голландские Авиалинии" width="32" height="14"></td>
+                <td class="airlines">КЛМ Королевские Голландские Авиалинии</td>
+                <td class="city">Новосибирск</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:15</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 1306</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Новосибирск</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:15</td>
+                <td class="smallTime">00:15</td>
+                <td class="flight">SU 1306</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Новосибирск</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:15</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 1482</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Красноярск</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:15</td>
+                <td class="smallTime">00:15</td>
+                <td class="flight">SU 1482</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Красноярск</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="arrivals">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Прибытие</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:15</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 2047</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Сплит</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">совершил посадку в 01:20</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:15</td>
+                <td class="smallTime">00:15</td>
+                <td class="flight">SU 2047</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Сплит</td>
+                <td class="status">совершил посадку в 01:20</td>
+                <td class="smallStatus">сел</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:20</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 1802</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Киев</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:20</td>
+                <td class="smallTime">00:20</td>
+                <td class="flight">SU 1802</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Киев</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:30</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">AF 4942</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Эйр Франс</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Казань</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:30</td>
+                <td class="smallTime">00:30</td>
+                <td class="flight">AF 4942</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/7F140A14-936D-452E-8B8D-B14214707604/logo_af_small.png" alt="Эйр Франс" width="58" height="7"></td>
+                <td class="airlines">Эйр Франс</td>
+                <td class="city">Казань</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:30</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">AZ 5215</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Алиталия</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Казань</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:30</td>
+                <td class="smallTime">00:30</td>
+                <td class="flight">AZ 5215</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/588230B8-B330-43C4-A574-864E59044B65/alitalia_small.jpg" alt="Алиталия" width="46" height="12"></td>
+                <td class="airlines">Алиталия</td>
+                <td class="city">Казань</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:30</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">KL 3070</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">КЛМ Королевские Голландские Авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Казань</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:30</td>
+                <td class="smallTime">00:30</td>
+                <td class="flight">KL 3070</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/9AD7B5AC-FD74-44D2-AA21-DF28E057E93B/klm_small.gif" alt="КЛМ Королевские Голландские Авиалинии" width="32" height="14"></td>
+                <td class="airlines">КЛМ Королевские Голландские Авиалинии</td>
+                <td class="city">Казань</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:30</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 1196</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Казань</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:30</td>
+                <td class="smallTime">00:30</td>
+                <td class="flight">SU 1196</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Казань</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:35</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">AF 4950</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Эйр Франс</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Омск</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:35</td>
+                <td class="smallTime">00:35</td>
+                <td class="flight">AF 4950</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/7F140A14-936D-452E-8B8D-B14214707604/logo_af_small.png" alt="Эйр Франс" width="58" height="7"></td>
+                <td class="airlines">Эйр Франс</td>
+                <td class="city">Омск</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:35</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">AZ 5659</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Алиталия</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Омск</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:35</td>
+                <td class="smallTime">00:35</td>
+                <td class="flight">AZ 5659</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/588230B8-B330-43C4-A574-864E59044B65/alitalia_small.jpg" alt="Алиталия" width="46" height="12"></td>
+                <td class="airlines">Алиталия</td>
+                <td class="city">Омск</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:35</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">KL 2948</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">КЛМ Королевские Голландские Авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Омск</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:35</td>
+                <td class="smallTime">00:35</td>
+                <td class="flight">KL 2948</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/9AD7B5AC-FD74-44D2-AA21-DF28E057E93B/klm_small.gif" alt="КЛМ Королевские Голландские Авиалинии" width="32" height="14"></td>
+                <td class="airlines">КЛМ Королевские Голландские Авиалинии</td>
+                <td class="city">Омск</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:35</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 1638</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Омск</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:35</td>
+                <td class="smallTime">00:35</td>
+                <td class="flight">SU 1638</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Омск</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="arrivals">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Прибытие</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:45</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 2133</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Стамбул</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">совершил посадку в 02:40</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:45</td>
+                <td class="smallTime">00:45</td>
+                <td class="flight">SU 2133</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Стамбул</td>
+                <td class="status">совершил посадку в 02:40</td>
+                <td class="smallStatus">сел</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:50</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">KL 2866</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">КЛМ Королевские Голландские Авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Барнаул</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:50</td>
+                <td class="smallTime">00:50</td>
+                <td class="flight">KL 2866</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/9AD7B5AC-FD74-44D2-AA21-DF28E057E93B/klm_small.gif" alt="КЛМ Королевские Голландские Авиалинии" width="32" height="14"></td>
+                <td class="airlines">КЛМ Королевские Голландские Авиалинии</td>
+                <td class="city">Барнаул</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:50</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 1428</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Магнитогорск</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:50</td>
+                <td class="smallTime">00:50</td>
+                <td class="flight">SU 1428</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Магнитогорск</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:50</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 1432</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Барнаул</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:50</td>
+                <td class="smallTime">00:50</td>
+                <td class="flight">SU 1432</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Барнаул</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="arrivals">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Прибытие</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:50</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 2539</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Осло</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">совершил посадку в 02:34</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:50</td>
+                <td class="smallTime">00:50</td>
+                <td class="flight">SU 2539</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Осло</td>
+                <td class="status">совершил посадку в 02:34</td>
+                <td class="smallStatus">сел</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:55</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">KL 2956</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">КЛМ Королевские Голландские Авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Ереван</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:55</td>
+                <td class="smallTime">00:55</td>
+                <td class="flight">KL 2956</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/9AD7B5AC-FD74-44D2-AA21-DF28E057E93B/klm_small.gif" alt="КЛМ Королевские Голландские Авиалинии" width="32" height="14"></td>
+                <td class="airlines">КЛМ Королевские Голландские Авиалинии</td>
+                <td class="city">Ереван</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 00:55</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 1864</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Ереван</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 00:55</td>
+                <td class="smallTime">00:55</td>
+                <td class="flight">SU 1864</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Ереван</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 01:00</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 1244</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Оренбург</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 01:00</td>
+                <td class="smallTime">01:00</td>
+                <td class="flight">SU 1244</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Оренбург</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 01:00</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 1632</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Симферополь</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 01:00</td>
+                <td class="smallTime">01:00</td>
+                <td class="flight">SU 1632</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Симферополь</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 01:05</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">KL 2858</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">КЛМ Королевские Голландские Авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Архангельск</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 01:05</td>
+                <td class="smallTime">01:05</td>
+                <td class="flight">KL 2858</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/9AD7B5AC-FD74-44D2-AA21-DF28E057E93B/klm_small.gif" alt="КЛМ Королевские Голландские Авиалинии" width="32" height="14"></td>
+                <td class="airlines">КЛМ Королевские Голландские Авиалинии</td>
+                <td class="city">Архангельск</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 01:05</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 1334</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Архангельск</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 01:05</td>
+                <td class="smallTime">01:05</td>
+                <td class="flight">SU 1334</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Архангельск</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 01:20</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">AF 4960</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Эйр Франс</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Уфа</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 01:20</td>
+                <td class="smallTime">01:20</td>
+                <td class="flight">AF 4960</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/7F140A14-936D-452E-8B8D-B14214707604/logo_af_small.png" alt="Эйр Франс" width="58" height="7"></td>
+                <td class="airlines">Эйр Франс</td>
+                <td class="city">Уфа</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 01:20</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">AZ 3026</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Алиталия</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Уфа</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 01:20</td>
+                <td class="smallTime">01:20</td>
+                <td class="flight">AZ 3026</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/588230B8-B330-43C4-A574-864E59044B65/alitalia_small.jpg" alt="Алиталия" width="46" height="12"></td>
+                <td class="airlines">Алиталия</td>
+                <td class="city">Уфа</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 01:20</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">KL 2926</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">КЛМ Королевские Голландские Авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Уфа</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 01:20</td>
+                <td class="smallTime">01:20</td>
+                <td class="flight">KL 2926</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/9AD7B5AC-FD74-44D2-AA21-DF28E057E93B/klm_small.gif" alt="КЛМ Королевские Голландские Авиалинии" width="32" height="14"></td>
+                <td class="airlines">КЛМ Королевские Голландские Авиалинии</td>
+                <td class="city">Уфа</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 01:20</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 1234</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Уфа</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 01:20</td>
+                <td class="smallTime">01:20</td>
+                <td class="flight">SU 1234</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Уфа</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 01:20</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 1536</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Томск</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 01:20</td>
+                <td class="smallTime">01:20</td>
+                <td class="flight">SU 1536</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Томск</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 01:25</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 036</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Санкт-Петербург</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 01:25</td>
+                <td class="smallTime">01:25</td>
+                <td class="flight">SU 036</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Санкт-Петербург</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 01:30</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">8Q 872</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Онур Эйр</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Анталия</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 01:30</td>
+                <td class="smallTime">01:30</td>
+                <td class="flight">8Q 872</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/68A25C20-E401-4FFB-A33E-F111622DDBC5/onurair.jpg" alt="Онур Эйр" width="64" height="14"></td>
+                <td class="airlines">Онур Эйр</td>
+                <td class="city">Анталия</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="arrivals">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Прибытие</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 01:30</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">KL 907</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">КЛМ Королевские Голландские Авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Амстердам</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">совершил посадку в 01:31</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 01:30</td>
+                <td class="smallTime">01:30</td>
+                <td class="flight">KL 907</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/9AD7B5AC-FD74-44D2-AA21-DF28E057E93B/klm_small.gif" alt="КЛМ Королевские Голландские Авиалинии" width="32" height="14"></td>
+                <td class="airlines">КЛМ Королевские Голландские Авиалинии</td>
+                <td class="city">Амстердам</td>
+                <td class="status">совершил посадку в 01:31</td>
+                <td class="smallStatus">сел</td>
+              </tr>
+              <tr class="arrivals">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Прибытие</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 01:30</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 3123</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Амстердам</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">совершил посадку в 01:31</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 01:30</td>
+                <td class="smallTime">01:30</td>
+                <td class="flight">SU 3123</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Амстердам</td>
+                <td class="status">совершил посадку в 01:31</td>
+                <td class="smallStatus">сел</td>
+              </tr>
+              <tr class="arrivals">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Прибытие</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 01:35</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">AZ 560</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Алиталия</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Милан</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">совершил посадку в 01:36</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 01:35</td>
+                <td class="smallTime">01:35</td>
+                <td class="flight">AZ 560</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/588230B8-B330-43C4-A574-864E59044B65/alitalia_small.jpg" alt="Алиталия" width="46" height="12"></td>
+                <td class="airlines">Алиталия</td>
+                <td class="city">Милан</td>
+                <td class="status">совершил посадку в 01:36</td>
+                <td class="smallStatus">сел</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 01:35</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">N4 1805</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Nordwind Airlines</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Анталия</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 01:35</td>
+                <td class="smallTime">01:35</td>
+                <td class="flight">N4 1805</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/0ADE59DA-44D3-4C22-91D7-924CE585ADE9/nw_logo.png" alt="" width="72" height="14"></td>
+              <td class="airlines">Nordwind Airlines</td>
+                <td class="city">Анталия</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="arrivals">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Прибытие</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 01:35</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 3201</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Милан</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">совершил посадку в 01:36</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 01:35</td>
+                <td class="smallTime">01:35</td>
+                <td class="flight">SU 3201</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Милан</td>
+                <td class="status">совершил посадку в 01:36</td>
+                <td class="smallStatus">сел</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 01:40</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">AF 4934</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Эйр Франс</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Пермь</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 01:40</td>
+                <td class="smallTime">01:40</td>
+                <td class="flight">AF 4934</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/7F140A14-936D-452E-8B8D-B14214707604/logo_af_small.png" alt="Эйр Франс" width="58" height="7"></td>
+                <td class="airlines">Эйр Франс</td>
+                <td class="city">Пермь</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 01:40</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">AZ 3952</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Алиталия</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Пермь</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 01:40</td>
+                <td class="smallTime">01:40</td>
+                <td class="flight">AZ 3952</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/588230B8-B330-43C4-A574-864E59044B65/alitalia_small.jpg" alt="Алиталия" width="46" height="12"></td>
+                <td class="airlines">Алиталия</td>
+                <td class="city">Пермь</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 01:40</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">KL 2922</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">КЛМ Королевские Голландские Авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Пермь</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 01:40</td>
+                <td class="smallTime">01:40</td>
+                <td class="flight">KL 2922</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/9AD7B5AC-FD74-44D2-AA21-DF28E057E93B/klm_small.gif" alt="КЛМ Королевские Голландские Авиалинии" width="32" height="14"></td>
+                <td class="airlines">КЛМ Королевские Голландские Авиалинии</td>
+                <td class="city">Пермь</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 01:40</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 1218</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Пермь</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 01:40</td>
+                <td class="smallTime">01:40</td>
+                <td class="flight">SU 1218</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Пермь</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 01:45</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">KL 2862</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">КЛМ Королевские Голландские Авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Тюмень</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 01:45</td>
+                <td class="smallTime">01:45</td>
+                <td class="flight">KL 2862</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/9AD7B5AC-FD74-44D2-AA21-DF28E057E93B/klm_small.gif" alt="КЛМ Королевские Голландские Авиалинии" width="32" height="14"></td>
+                <td class="airlines">КЛМ Королевские Голландские Авиалинии</td>
+                <td class="city">Тюмень</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 01:45</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 1508</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Тюмень</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 01:45</td>
+                <td class="smallTime">01:45</td>
+                <td class="flight">SU 1508</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Тюмень</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 01:45</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 1512</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Сургут</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 01:45</td>
+                <td class="smallTime">01:45</td>
+                <td class="flight">SU 1512</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Сургут</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 01:50</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">KL 2906</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">КЛМ Королевские Голландские Авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Екатеринбург</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 01:50</td>
+                <td class="smallTime">01:50</td>
+                <td class="flight">KL 2906</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/9AD7B5AC-FD74-44D2-AA21-DF28E057E93B/klm_small.gif" alt="КЛМ Королевские Голландские Авиалинии" width="32" height="14"></td>
+                <td class="airlines">КЛМ Королевские Голландские Авиалинии</td>
+                <td class="city">Екатеринбург</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 01:50</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 1412</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Екатеринбург</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 01:50</td>
+                <td class="smallTime">01:50</td>
+                <td class="flight">SU 1412</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Екатеринбург</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 01:55</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 1472</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Нижневартовск</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 01:55</td>
+                <td class="smallTime">01:55</td>
+                <td class="flight">SU 1472</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Нижневартовск</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 01:55</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 1522</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Новый Уренгой</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 01:55</td>
+                <td class="smallTime">01:55</td>
+                <td class="flight">SU 1522</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Новый Уренгой</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="arrivals">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Прибытие</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 02:05</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">AZ 596</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Алиталия</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Рим</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">совершил посадку в 02:56</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 02:05</td>
+                <td class="smallTime">02:05</td>
+                <td class="flight">AZ 596</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/588230B8-B330-43C4-A574-864E59044B65/alitalia_small.jpg" alt="Алиталия" width="46" height="12"></td>
+                <td class="airlines">Алиталия</td>
+                <td class="city">Рим</td>
+                <td class="status">совершил посадку в 02:56</td>
+                <td class="smallStatus">сел</td>
+              </tr>
+              <tr class="arrivals">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Прибытие</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 02:05</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 3205</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Рим</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">совершил посадку в 02:56</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 02:05</td>
+                <td class="smallTime">02:05</td>
+                <td class="flight">SU 3205</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Рим</td>
+                <td class="status">совершил посадку в 02:56</td>
+                <td class="smallStatus">сел</td>
+              </tr>
+              <tr class="arrivals">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Прибытие</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 02:15</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 2383</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Женева</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">совершил посадку в 02:22</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 02:15</td>
+                <td class="smallTime">02:15</td>
+                <td class="flight">SU 2383</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Женева</td>
+                <td class="status">совершил посадку в 02:22</td>
+                <td class="smallStatus">сел</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 02:20</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">IK 1611</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Пегас Флай</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Ираклион</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 02:20</td>
+                <td class="smallTime">02:20</td>
+                <td class="flight">IK 1611</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/A256476D-4B1D-4521-AABF-19F893A1AB4D/pegas_fly_50.png" alt="Пегас Флай" width="50" height="13"></td>
+                <td class="airlines">Пегас Флай</td>
+                <td class="city">Ираклион</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="arrivals">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Прибытие</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 02:30</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 2305</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Франкфурт</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">совершил посадку в 02:37</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 02:30</td>
+                <td class="smallTime">02:30</td>
+                <td class="flight">SU 2305</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Франкфурт</td>
+                <td class="status">совершил посадку в 02:37</td>
+                <td class="smallStatus">сел</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 02:45</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">IK 1811</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Пегас Флай</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Анталия</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 02:45</td>
+                <td class="smallTime">02:45</td>
+                <td class="flight">IK 1811</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/A256476D-4B1D-4521-AABF-19F893A1AB4D/pegas_fly_50.png" alt="Пегас Флай" width="50" height="13"></td>
+                <td class="airlines">Пегас Флай</td>
+                <td class="city">Анталия</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="arrivals">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Прибытие</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 02:45</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 2393</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Цюрих</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">совершил посадку в 03:21</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 02:45</td>
+                <td class="smallTime">02:45</td>
+                <td class="flight">SU 2393</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Цюрих</td>
+                <td class="status">совершил посадку в 03:21</td>
+                <td class="smallStatus">сел</td>
+              </tr>
+              <tr class="arrivals">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Прибытие</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 02:50</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 1845</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Кишинев</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">совершил посадку в 10:43</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 02:50</td>
+                <td class="smallTime">02:50</td>
+                <td class="flight">SU 1845</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Кишинев</td>
+                <td class="status">совершил посадку в 10:43</td>
+                <td class="smallStatus">сел</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 02:55</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">N4 1801</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Nordwind Airlines</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Анталия</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 02:55</td>
+                <td class="smallTime">02:55</td>
+                <td class="flight">N4 1801</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/0ADE59DA-44D3-4C22-91D7-924CE585ADE9/nw_logo.png" alt="" width="72" height="14"></td>
+              <td class="airlines">Nordwind Airlines</td>
+                <td class="city">Анталия</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="arrivals">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Прибытие</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 03:10</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 2595</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Мюнхен</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">отменен </span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 03:10</td>
+                <td class="smallTime">03:10</td>
+                <td class="flight">SU 2595</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Мюнхен</td>
+                <td class="status">отменен </td>
+                <td class="smallStatus">отм.</td>
+              </tr>
+              <tr class="arrivals">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Прибытие</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 03:25</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">JU 656</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Эйр Сербиа</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Белград</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">совершил посадку в 03:07</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 03:25</td>
+                <td class="smallTime">03:25</td>
+                <td class="flight">JU 656</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/40390547-1522-4E0D-A8F5-C23955E3D6F4/air-serbia-1.jpg" alt="Эйр Сербиа" width="46" height="23"></td>
+                <td class="airlines">Эйр Сербиа</td>
+                <td class="city">Белград</td>
+                <td class="status">совершил посадку в 03:07</td>
+                <td class="smallStatus">сел</td>
+              </tr>
+              <tr class="arrivals">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Прибытие</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 03:25</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 3525</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Белград</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">совершил посадку в 03:07</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 03:25</td>
+                <td class="smallTime">03:25</td>
+                <td class="flight">SU 3525</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Белград</td>
+                <td class="status">совершил посадку в 03:07</td>
+                <td class="smallStatus">сел</td>
+              </tr>
+              <tr class="arrivals">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Прибытие</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 03:35</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">FI 7210</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Айслендэйр</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Копенгаген</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">совершил посадку в 04:01</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 03:35</td>
+                <td class="smallTime">03:35</td>
+                <td class="flight">FI 7210</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/9764D669-F2F9-41E1-920A-E0C13DBE831A/icelandair.jpg" alt="Айслендэйр" width="64" height="14"></td>
+                <td class="airlines">Айслендэйр</td>
+                <td class="city">Копенгаген</td>
+                <td class="status">совершил посадку в 04:01</td>
+                <td class="smallStatus">сел</td>
+              </tr>
+              <tr class="arrivals">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Прибытие</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 03:35</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 2497</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Копенгаген</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">совершил посадку в 04:01</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 03:35</td>
+                <td class="smallTime">03:35</td>
+                <td class="flight">SU 2497</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Копенгаген</td>
+                <td class="status">совершил посадку в 04:01</td>
+                <td class="smallStatus">сел</td>
+              </tr>
+              <tr class="arrivals">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Прибытие</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 03:40</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">AZ 7184</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Алиталия</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Рим</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">совершил посадку в 03:48</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 03:40</td>
+                <td class="smallTime">03:40</td>
+                <td class="flight">AZ 7184</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/588230B8-B330-43C4-A574-864E59044B65/alitalia_small.jpg" alt="Алиталия" width="46" height="12"></td>
+                <td class="airlines">Алиталия</td>
+                <td class="city">Рим</td>
+                <td class="status">совершил посадку в 03:48</td>
+                <td class="smallStatus">сел</td>
+              </tr>
+              <tr class="arrivals">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Прибытие</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 03:40</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 2405</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Рим</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">совершил посадку в 03:48</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 03:40</td>
+                <td class="smallTime">03:40</td>
+                <td class="flight">SU 2405</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Рим</td>
+                <td class="status">совершил посадку в 03:48</td>
+                <td class="smallStatus">сел</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 03:45</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">N4 1831</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Nordwind Airlines</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Измир</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 03:45</td>
+                <td class="smallTime">03:45</td>
+                <td class="flight">N4 1831</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/0ADE59DA-44D3-4C22-91D7-924CE585ADE9/nw_logo.png" alt="" width="72" height="14"></td>
+              <td class="airlines">Nordwind Airlines</td>
+                <td class="city">Измир</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="arrivals">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Прибытие</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 03:55</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 2575</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Лондон</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">совершил посадку в 04:04</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 03:55</td>
+                <td class="smallTime">03:55</td>
+                <td class="flight">SU 2575</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Лондон</td>
+                <td class="status">совершил посадку в 04:04</td>
+                <td class="smallStatus">сел</td>
+              </tr>
+              <tr class="arrivals">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Прибытие</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 04:00</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">AZ 7166</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Алиталия</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Венеция</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">совершил посадку в 03:50</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 04:00</td>
+                <td class="smallTime">04:00</td>
+                <td class="flight">AZ 7166</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/588230B8-B330-43C4-A574-864E59044B65/alitalia_small.jpg" alt="Алиталия" width="46" height="12"></td>
+                <td class="airlines">Алиталия</td>
+                <td class="city">Венеция</td>
+                <td class="status">совершил посадку в 03:50</td>
+                <td class="smallStatus">сел</td>
+              </tr>
+              <tr class="departures">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Отправление</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 04:00</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">FG 708</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Ариана Афган Эйрлайнз</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Баку-Кабул</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">вылетел</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 04:00</td>
+                <td class="smallTime">04:00</td>
+                <td class="flight">FG 708</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/4A5845C3-40B4-4BB6-ABC4-E71DF7181518/arianaafghan.png" alt="Ариана Афган Эйрлайнз" width="58" height="14"></td>
+                <td class="airlines">Ариана Афган Эйрлайнз</td>
+                <td class="city">Баку-Кабул</td>
+                <td class="status">вылетел</td>
+                <td class="smallStatus">выл.</td>
+              </tr>
+              <tr class="arrivals">
+                <td class="type">
+                	<div class="icon"></div>
+                	<div class="infoWindow">
+                		<span class="title">Тип рейса</span>
+                		<span class="value">Прибытие</span>
+                		<span class="title">Плановое время</span>
+                		<span class="value">28 июля 04:00</span>
+                		<span class="title">Номер рейса</span>
+                		<span class="value">SU 2423</span>
+                		<span class="title">Авиакомпания</span>
+                		<span class="value">Аэрофлот — Российские авиалинии</span>
+                		<span class="title">Направление</span>
+                		<span class="value">Венеция</span>
+                		<span class="title">Статус рейса</span>
+                		<span class="value">совершил посадку в 03:50</span>
+                	</div>
+              	</td>
+                <td class="time">28 июля 04:00</td>
+                <td class="smallTime">04:00</td>
+                <td class="flight">SU 2423</td>
+                <td class="logo">
+                  <img src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot.jpg" alt="Аэрофлот — Российские авиалинии" width="46" height="14"></td>
+                <td class="airlines">Аэрофлот — Российские авиалинии</td>
+                <td class="city">Венеция</td>
+                <td class="status">совершил посадку в 03:50</td>
+                <td class="smallStatus">сел</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

@@ -1,32 +1,71 @@
 body {
-	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+* {
+  font-size: 16px;
+	box-sizing: border-box;
 }
 
-.container {
-	border: 1px solid grey;
-	padding-top: 40px;
-	/*background-color: #B2B2B2;*/
-  position: absolute;
-  bottom: 100px;
-  top: 100px;
-  right: 100px;
-  left: 100px;
+#wrapper {
+  max-width: 1200px;
+  position: relative;
+  height: 100%;
+  margin: 0 auto;
 }
-.tBodyContainer {
-	overflow-y: auto;
-	height: 100%;
-	border-top: 1px solid grey;
-	box-sizing: border-box;
+#tableContainer {
+  border: 1px solid grey;
+  /*background-color: #B2B2B2;*/
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding-top: 80px;
+}
+#tableContainer>input,
+#tableContainer>span {
+  display: inline-block;
+  line-height: 40px;
+  position: absolute;
+  top: 0;
+}
+input#arrivalsCheck {
+  top: 10px;
+  left: 10px;
+}
+input#arrivalsCheck + span {
+  left: 30px;
+}
+input#departuresCheck {
+  top: 10px;
+  left: 150px;
+}
+input#departuresCheck + span {
+  left: 170px;
+}
+#arrivalsCheck:not(:checked) ~ #tBodyContainer .arrivals {
+  display: none;
+}
+#departuresCheck:not(:checked) ~ #tBodyContainer .departures {
+  display: none;
+}
+
+#tBodyContainer {
+  overflow-y: auto;
+  height: 100%;
+  border-top: 1px solid grey;
 	/*background-color: white;*/
 }
 
 #table {
 	width: 100%;
 	border-collapse: collapse;
+  overflow: hidden;
 }
 #table td, 
 #table th {
-	padding: 10px;
 	border-right: 1px solid grey;
 	border-bottom: 1px solid grey;
 	border-top: 0px;
@@ -41,18 +80,44 @@ body {
   border: none;
   white-space: nowrap;
 }
-#table th>div{
+#table th:before {
+  display: block;
   position: absolute;
   background: transparent;
   color: black;
-  top: 0;
-  margin-left: -10px;
+  top: 40px;
+  margin-left: -1px;
   line-height: normal;
   padding: 11px;
+  height: 40px;
+	box-sizing: border-box;
 }
-#table th:not(:first-child)>div {
+#table th:not(:first-child):before {
 	border-left: 1px solid grey;
 }
+
+#table th.type:before {
+  content: 'Тип';
+}
+#table th.time:before {
+  content: 'Плановое время';
+}
+#table th.flight:before {
+  content: 'Рейс';
+}
+#table th.airlines:before {
+  content: 'Авиакомпания';
+}
+#table th.city:before {
+  content: 'Направление';
+}
+#table th.status:before {
+  content: 'Статус рейса';
+}
+#table th.logo:before {
+  content: 'Лого';
+}
+
 #table td {
 	position: relative;
 }
@@ -71,4 +136,118 @@ body {
 #table tbody>tr:hover>td,
 #table td:hover:after {
 	background-color: #659CE6;
+}
+#table td:first-child>div.icon {
+  background-image: url('http://www.vnukovo.ru/bitrix/templates/.default/images/icon-plane.png');
+  height: 19px;
+  width: 24px;
+}
+#table .arrivals>td:first-child>div.icon {
+  background-position: 24px 19px;
+}
+#table .departures>td:first-child>div.icon {
+  background-position: 0px 19px;
+}
+#table tr .infoWindow {
+	position: absolute;
+	left: 90%;
+  top: 0;
+  display: none;
+  height: 0px;
+  z-index:10;
+  padding: 0px;
+  border: 1px solid black;
+  background-color: white;
+  transition: height 0.5s;
+  -webkit-transition: height 0.5s;
+}
+#table tr:active .infoWindow {
+	display: block;
+	padding: 5ps;
+	height: auto;
+}
+#table td.smallTime,
+#table td.smallStatus {
+	display: none;
+}
+
+@media (min-width: 1100px) {
+	#table td{
+		padding: 10px;
+	}
+  #table .type {
+    min-width: 52px;
+  }
+  #table .time {
+    min-width: 156px; 
+  }
+  #table .flight {
+    min-width: 62px; 
+  }
+  #table .logo {
+    min-width: 62px; 
+  }
+  #table .airlines {
+    min-width: 141px; 
+  }
+  #table .city {
+    min-width: 130px; 
+  }
+  #table .status {
+    min-width: 128px; 
+  }
+}
+
+@media (max-width: 1100px) {
+	* {
+		font-size: 14px;
+	}
+	#table td {
+		padding: 5px;
+	}
+	#table th:before {
+		padding: 10px 5px;
+	}
+  #table th.time:before {
+    content: 'Время';
+  }
+  #table th.logo:before {
+    content: 'Компания';
+  }
+  #table th.status:before {
+    content: 'Статус';
+  }
+  #table td:after {
+    padding: 0px 5px;
+    left: -5px;
+  }
+}
+
+@media (max-width: 900px) {
+  #table th.type:before {
+    content: ' ';
+  }
+  #table .airlines {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+	#table td.time,
+	#table td.status {
+		display: none;
+	}
+	#table td.smallTime,
+	#table td.smallStatus {
+		display: table-cell;
+	}
+}
+
+@media (max-width: 500px) {
+	#table .logo {
+		display: none;
+	}
+	#table .city {
+		display: none;
+	}
 }
