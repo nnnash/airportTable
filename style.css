@@ -1,11 +1,12 @@
 body {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Open Sans', arial;
   margin: 0px;
   padding: 0px;
+  background: steelblue;
 }
 * {
   font-size: 16px;
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 #wrapper {
@@ -15,14 +16,14 @@ body {
   margin: 0 auto;
 }
 #tableContainer {
-  border: 1px solid grey;
-  /*background-color: #B2B2B2;*/
+  border: 1px solid #38678f;
   position: absolute;
   bottom: 0;
   top: 0;
   right: 0;
   left: 0;
   padding-top: 80px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 #tableContainer>input,
 #tableContainer>span {
@@ -30,6 +31,8 @@ body {
   line-height: 40px;
   position: absolute;
   top: 0;
+  color: white;
+  text-shadow: rgb(56, 103, 143) 0px 1px 0px;
 }
 input#arrivalsCheck {
   top: 10px;
@@ -48,30 +51,43 @@ input#departuresCheck + span {
 #arrivalsCheck:not(:checked) ~ #tBodyContainer .arrivals {
   display: none;
 }
+#arrivalsCheck:not(:checked) ~ #tBodyContainer .departures {
+  background: white
+}
 #departuresCheck:not(:checked) ~ #tBodyContainer .departures {
   display: none;
 }
-
+#arrivalsCheck:not(:checked) ~ #tBodyContainer .arrivals {
+  background: white;
+}
+#bg {
+  top: 80px;
+  bottom: 0;
+  position: absolute;
+  background: white;
+  z-index: -2;
+  left: 0;
+  right: 0;
+}
 #tBodyContainer {
   overflow-y: auto;
   height: 100%;
-  border-top: 1px solid grey;
-	/*background-color: white;*/
+  border-top: 1px solid #38678f;
 }
 
-#table {
+table {
 	width: 100%;
 	border-collapse: collapse;
   overflow: hidden;
 }
-#table td, 
-#table th {
-	border-right: 1px solid grey;
-	border-bottom: 1px solid grey;
+td, 
+th {
+	border-right: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
 	border-top: 0px;
 }
 
-#table th {
+th {
   height: 0;
   line-height: 0;
   padding-top: 0;
@@ -80,11 +96,13 @@ input#departuresCheck + span {
   border: none;
   white-space: nowrap;
 }
-#table th:before {
+th:before {
+  font-weight: normal;
   display: block;
   position: absolute;
   background: transparent;
-  color: black;
+  color: white;
+  text-shadow: rgb(56, 103, 143) 0px 1px 0px;
   top: 40px;
   margin-left: -1px;
   line-height: normal;
@@ -92,36 +110,45 @@ input#departuresCheck + span {
   height: 40px;
 	box-sizing: border-box;
 }
-#table th:not(:first-child):before {
-	border-left: 1px solid grey;
+th:not(.type):before {
+	border-left: 1px solid #38678f;
 }
 
-#table th.type:before {
-  content: 'Тип';
+th.type:before {
+  content: ' ';
+  width: 100%;
+  border-top: 1px solid #38678f;
+  background: steelblue;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
 }
-#table th.time:before {
+th.time:before {
   content: 'Плановое время';
 }
-#table th.flight:before {
+th.flight:before {
   content: 'Рейс';
 }
-#table th.airlines:before {
+th.airlines:before {
   content: 'Авиакомпания';
 }
-#table th.city:before {
+th.city:before {
   content: 'Направление';
 }
-#table th.status:before {
+th.status:before {
   content: 'Статус рейса';
 }
-#table th.logo:before {
+th.logo:before {
   content: 'Лого';
 }
 
-#table td {
-	position: relative;
+tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.05);
 }
-#table td:after {
+
+td {
+	position: relative;
+  background: transparent;
+}
+td.highlighted:after {
   position: relative;
   z-index: -1;
   height: 10000px;
@@ -133,67 +160,97 @@ input#departuresCheck + span {
   display: block;
   content: '';
 }
-#table tbody>tr:hover>td,
-#table td:hover:after {
-	background-color: #659CE6;
+tr:hover>td.highlighted{
+  background-color: rgba(185, 185, 185, 0.65);
 }
-#table td:first-child>div.icon {
+td:hover:after {
+	background-color: rgb(222, 222, 222);
+}
+td.type div.icon {
   background-image: url('http://www.vnukovo.ru/bitrix/templates/.default/images/icon-plane.png');
   height: 19px;
   width: 24px;
+  cursor: pointer;
 }
-#table .arrivals>td:first-child>div.icon {
+.arrivals>td:first-child>div.icon {
   background-position: 24px 19px;
 }
-#table .departures>td:first-child>div.icon {
+.departures>td:first-child>div.icon {
   background-position: 0px 19px;
 }
-#table tr .infoWindow {
-	position: absolute;
-	left: 90%;
+.departures .type:hover>.icon,
+.departures:active .type>.icon {
+  background-position: 0px 0px;
+}
+.arrivals .type:hover>.icon,
+.arrivals:active .type>.icon {
+  background-position: 24px 0px;
+}
+tr .infoWindow {
+  position: absolute;
+  left: 90%;
   top: 0;
-  display: none;
-  height: 0px;
   z-index:10;
-  padding: 0px;
-  border: 1px solid black;
+  border: 1px solid #38678f;
   background-color: white;
-  transition: height 0.5s;
-  -webkit-transition: height 0.5s;
+  width: 350px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s linear 0.5s;
+  -webkit-transition: 0.2s linear 0.5s;
+	box-shadow: 0 5px 30px rgba(0, 0, 0, 0.4);
 }
-#table tr:active .infoWindow {
-	display: block;
-	padding: 5ps;
-	height: auto;
+tr:last-child .infoWindow,
+tr:nth-last-child(2) .infoWindow,
+tr:nth-last-child(3) .infoWindow,
+tr:nth-last-child(4) .infoWindow {
+  bottom: 0;
+  top:initial;
 }
-#table td.smallTime,
-#table td.smallStatus {
+.infoWindow:hover,
+tr:active .infoWindow {
+  visibility: visible;
+  opacity: 1;
+  transition: 0s linear 0s;
+  -webkit-transition: 0s linear 0s;
+}
+.infoWindow table td:first-child {
+	border-right: 1px solid #38678f;
+	border-bottom: 1px solid #38678f;
+  background: steelblue;
+  box-shadow: 7px 0px 30px rgba(0, 0, 0, 0.2);
+}
+.infoWindow .title {
+  text-align: right;
+  color: white;
+  text-shadow: rgb(56, 103, 143) 0px 1px 0px;
+}
+
+td.smallTime,
+td.smallStatus {
 	display: none;
 }
 
 @media (min-width: 1100px) {
-	#table td{
+	td{
 		padding: 10px;
 	}
-  #table .type {
-    min-width: 52px;
-  }
-  #table .time {
+  .time {
     min-width: 156px; 
   }
-  #table .flight {
+  .flight {
     min-width: 62px; 
   }
-  #table .logo {
+  .logo {
     min-width: 62px; 
   }
-  #table .airlines {
+  .airlines {
     min-width: 141px; 
   }
-  #table .city {
+  .city {
     min-width: 130px; 
   }
-  #table .status {
+  .status {
     min-width: 128px; 
   }
 }
@@ -202,52 +259,49 @@ input#departuresCheck + span {
 	* {
 		font-size: 14px;
 	}
-	#table td {
+	td {
 		padding: 5px;
 	}
-	#table th:before {
-		padding: 10px 5px;
+	th:before {
+		padding: 13px 5px;
 	}
-  #table th.time:before {
+  th.time:before {
     content: 'Время';
   }
-  #table th.logo:before {
+  th.logo:before {
     content: 'Компания';
   }
-  #table th.status:before {
+  th.status:before {
     content: 'Статус';
   }
-  #table td:after {
+  td.highlighted:after {
     padding: 0px 5px;
     left: -5px;
   }
 }
 
 @media (max-width: 900px) {
-  #table th.type:before {
-    content: ' ';
-  }
-  #table .airlines {
+  .airlines {
     display: none;
   }
 }
 
 @media (max-width: 600px) {
-	#table td.time,
-	#table td.status {
+	td.time,
+	td.status {
 		display: none;
 	}
-	#table td.smallTime,
-	#table td.smallStatus {
+	td.smallTime,
+	td.smallStatus {
 		display: table-cell;
 	}
 }
 
 @media (max-width: 500px) {
-	#table .logo {
+	.logo {
 		display: none;
 	}
-	#table .city {
+	.city {
 		display: none;
 	}
 }
