@@ -1,16 +1,18 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Airport table</title>
     <link rel="stylesheet" href="style.css"/>
   </head>
   <body>
     <div id="wrapper">
       <div id="tableContainer">
-        <input type="checkbox" id="arrivalsCheck" value="true" checked>
-        <span>Прибытие</span>
-        <input type="checkbox" id="departuresCheck" value="true" checked>
-        <span>Отправление</span>
+        <input type="checkbox" id="arrivalsCheck">
+        <label for="arrivalsCheck">Прибытие</label>
+        <input type="checkbox" id="departuresCheck">
+        <label for="departuresCheck">Отправление</label>
         <div id="bg"></div>
         <div id="tBodyContainer">
           <table id="table">

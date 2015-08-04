@@ -1,3 +1,9 @@
+body, html {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -3;
+}
 body {
   font-family: 'Open Sans', arial;
   margin: 0px;
@@ -8,7 +14,6 @@ body {
   font-size: 16px;
   box-sizing: border-box;
 }
-
 #wrapper {
   max-width: 1200px;
   position: relative;
@@ -18,47 +23,56 @@ body {
 #tableContainer {
   border: 1px solid #38678f;
   position: absolute;
-  bottom: 0;
-  top: 0;
-  right: 0;
-  left: 0;
+  height: 100%;
+  width: 100%;
   padding-top: 80px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
-#tableContainer>input,
-#tableContainer>span {
+#tableContainer>label {
   display: inline-block;
-  line-height: 40px;
   position: absolute;
-  top: 0;
+  top: 10px;
   color: white;
   text-shadow: rgb(56, 103, 143) 0px 1px 0px;
+  cursor: pointer;
+  border-bottom: 1px dashed white;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-input#arrivalsCheck {
-  top: 10px;
-  left: 10px;
+input#arrivalsCheck,
+input#departuresCheck {
+  position: absolute;
+  left: -1000px;
 }
-input#arrivalsCheck + span {
+input#arrivalsCheck + label {
   left: 30px;
 }
-input#departuresCheck {
-  top: 10px;
-  left: 150px;
+input#departuresCheck + label {
+  left: 140px;
 }
-input#departuresCheck + span {
-  left: 170px;
-}
-#arrivalsCheck:not(:checked) ~ #tBodyContainer .arrivals {
+#arrivalsCheck:checked ~ #tBodyContainer .arrivals {
   display: none;
 }
-#arrivalsCheck:not(:checked) ~ #tBodyContainer .departures {
-  background: white
+#arrivalsCheck:checked + label {
+  color: rgb(163, 163, 163);
+  border-bottom-color: rgb(163, 163, 163);
 }
-#departuresCheck:not(:checked) ~ #tBodyContainer .departures {
+#arrivalsCheck:checked ~ #tBodyContainer .departures {
+  background: rgba(0, 0, 0, 0);
+  /* не знаю, как сделать зебру со скрытыми элементами без js*/
+}
+#departuresCheck:checked ~ #tBodyContainer .departures {
   display: none;
 }
-#arrivalsCheck:not(:checked) ~ #tBodyContainer .arrivals {
-  background: white;
+#departuresCheck:checked + label {
+  color: rgb(163, 163, 163);
+  border-bottom-color: rgb(163, 163, 163);
+}
+#departuresCheck:checked ~ #tBodyContainer .arrivals {
+  background: rgba(0, 0, 0, 0);
+  /* не знаю, как сделать зебру со скрытыми элементами без js*/
 }
 #bg {
   top: 80px;
@@ -208,6 +222,7 @@ tr:nth-last-child(4) .infoWindow {
   top:initial;
 }
 .infoWindow:hover,
+.icon:active .infoWindow,
 tr:active .infoWindow {
   visibility: visible;
   opacity: 1;
@@ -231,10 +246,13 @@ td.smallStatus {
 	display: none;
 }
 
-@media (min-width: 1100px) {
+@media screen and (min-width: 1100px) {
 	td{
 		padding: 10px;
 	}
+  .type {
+    width: 32px;
+  }
   .time {
     min-width: 156px; 
   }
@@ -255,7 +273,7 @@ td.smallStatus {
   }
 }
 
-@media (max-width: 1100px) {
+@media screen and (max-width: 1100px) {
 	* {
 		font-size: 14px;
 	}
@@ -264,7 +282,10 @@ td.smallStatus {
 	}
 	th:before {
 		padding: 13px 5px;
-	}
+  }
+  .type {
+    width: 22px;
+  }
   th.time:before {
     content: 'Время';
   }
@@ -280,24 +301,27 @@ td.smallStatus {
   }
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
   .airlines {
     display: none;
   }
 }
 
-@media (max-width: 600px) {
-	td.time,
-	td.status {
-		display: none;
-	}
-	td.smallTime,
-	td.smallStatus {
-		display: table-cell;
-	}
+@media screen and (max-width: 600px) {
+  td.time,
+  td.status {
+    display: none;
+  }
+  td.smallTime,
+  td.smallStatus {
+    display: table-cell;
+  }
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 480px) {
+  html {
+    -webkit-text-size-adjust: none;
+  }
 	.logo {
 		display: none;
 	}
