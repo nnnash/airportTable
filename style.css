@@ -222,7 +222,6 @@ tr:nth-last-child(4) .infoWindow {
   top:initial;
 }
 .infoWindow:hover,
-.icon:active .infoWindow,
 tr:active .infoWindow {
   visibility: visible;
   opacity: 1;
